@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mike Waitindi - Full-Stack Developer based in Nairobi, Kenya with 3+ years of experience building scalable web applications using JavaScript, React, and Node.js.">
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <link rel="apple-touch-icon" href="logo.jpeg">
+    <title>Mike Waitindi | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+            font-weight: 400;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        p, li, span, a {
+            font-weight: 400;
+        }
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+        }
+        /* Subtle glow animation for the background */
+        .glow-effect {
+            background: radial-gradient(ellipse at 30% 0%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
+                        radial-gradient(ellipse at 70% 0%, rgba(6, 182, 212, 0.15) 0%, transparent 40%);
+        }
+        /* Fade in down animation */
+        @keyframes fade-in-down {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fade-in-down 0.6s ease-out;
+        }
+        /* Typing animation */
+        .typing-container {
+            display: inline-block;
+        }
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 3px solid;
+            border-image: linear-gradient(to bottom, #f43f5e, #d946ef, #6366f1) 1;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #d946ef; }
+        }
+        /* Scroll fade-in animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fade-in-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* Stagger delays for children */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-[#020410] text-slate-400 antialiased selection:bg-indigo-500/30 selection:text-indigo-200 bg-grid min-h-screen flex flex-col items-center relative overflow-x-hidden">
+    
+    <!-- Top Glow -->
+    <div class="fixed top-0 left-0 w-full h-[500px] glow-effect pointer-events-none z-0"></div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-3xl px-6 py-12 md:py-20 relative z-10">
+
+        <!-- Header / Navigation -->
+        <header class="flex justify-between items-center mb-16 md:mb-24 animate-fade-in-down">
+            <div class="flex items-center gap-2">
+                <img src="logo.jpeg" alt="Link Bridge" class="h-16 md:h-20 w-auto">
+            </div>
+            <nav class="flex gap-4 md:gap-6 text-sm font-medium">
+                <a href="mailto:wrootmike@gmail.com" class="text-slate-400 hover:text-rose-400 transition-colors duration-200">Contact</a>
+                <a href="https://github.com/garymike07" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition-colors duration-200">GitHub</a>
+                <a href="https://linkedin.com/in/mike-waitindi-654bb2344" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">LinkedIn</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-20">
+            <div class="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-8">
+                <div class="flex-1">
+                    <h1 class="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
+                        <span id="hero-line1" class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500"></span>
+                        <br><span id="hero-line2" class="text-white"></span><span id="hero-line3" class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500"></span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mb-8" id="hero-paragraph"></p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="mailto:wrootmike@gmail.com" class="inline-flex items-center gap-2 bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-500 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 hover:shadow-[0_0_25px_-5px_rgba(236,72,153,0.5)] transition-all duration-300">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            wrootmike@gmail.com
+                        </a>
+                        <a href="tel:+254792618156" class="inline-flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 px-5 py-2.5 rounded-md text-sm font-medium hover:border-emerald-500 hover:text-emerald-400 transition-all duration-300">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            +254 792 618 156
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-shrink-0">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-rose-500 via-fuchsia-500 to-cyan-500 rounded-full blur-sm opacity-75"></div>
+                        <img src="profile.png" alt="Mike Waitindi" class="relative w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-2 border-white/10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-slate-800/50 mb-20">
+
+        <!-- Projects Section -->
+        <section class="mb-20 fade-in-section">
+            <h2 class="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-8 flex items-center gap-2">
+                <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+                <span data-typewriter="Key Projects" data-speed="40"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <a href="https://law-five-eta.vercel.app" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.15)] relative overflow-hidden fade-in-scale stagger-1">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="flex justify-between items-start mb-4 relative z-10">
+                        <div class="p-2 bg-indigo-950/50 border border-indigo-900/50 rounded-lg text-indigo-300">
+                            <i data-lucide="scale" class="w-5 h-5"></i>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 tracking-tight relative z-10 group-hover:text-indigo-200" data-typewriter="Legal Flow System" data-speed="35"></h3>
+                    <p class="text-sm text-slate-400 mb-4 line-clamp-2 relative z-10" data-typewriter="Full-Stack case management platform for legal professionals." data-speed="20"></p>
+                    <div class="flex gap-2 text-xs text-slate-500 relative z-10">
+                        <span class="bg-cyan-950/40 border border-cyan-900/40 text-cyan-300 px-2 py-1 rounded">React</span>
+                        <span class="bg-green-950/40 border border-green-900/40 text-green-300 px-2 py-1 rounded">Node.js</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://codemaster-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-cyan-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-[0_0_30px_-10px_rgba(34,211,238,0.15)] relative overflow-hidden fade-in-scale stagger-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="flex justify-between items-start mb-4 relative z-10">
+                        <div class="p-2 bg-cyan-950/50 border border-cyan-900/50 rounded-lg text-cyan-300">
+                            <i data-lucide="code-2" class="w-5 h-5"></i>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 tracking-tight relative z-10 group-hover:text-cyan-200" data-typewriter="CodeMaster" data-speed="35"></h3>
+                    <p class="text-sm text-slate-400 mb-4 line-clamp-2 relative z-10" data-typewriter="Interactive coding education platform web application." data-speed="20"></p>
+                    <div class="flex gap-2 text-xs text-slate-500 relative z-10">
+                        <span class="bg-purple-950/40 border border-purple-900/40 text-purple-300 px-2 py-1 rounded">Full-Stack</span>
+                        <span class="bg-amber-950/40 border border-amber-900/40 text-amber-300 px-2 py-1 rounded">Web App</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="mb-20 fade-in-section">
+            <h2 class="text-sm font-semibold text-violet-400 uppercase tracking-wider mb-8 flex items-center gap-2">
+                <i data-lucide="briefcase" class="w-4 h-4"></i>
+                <span data-typewriter="Experience" data-speed="40"></span>
+            </h2>
+
+            <div class="relative border-l border-slate-800 ml-3 space-y-12">
+                <!-- Gradient Line Overlay -->
+                <div class="absolute top-0 bottom-0 -left-[1px] w-[1px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent"></div>
+                
+                <!-- Job 1 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-950 border border-indigo-500 ring-4 ring-indigo-900/20"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-indigo-100 font-medium tracking-tight group-hover:text-white" data-typewriter="Council of Legal Education" data-speed="30"></h3>
+                        <span class="text-xs text-indigo-400/60 font-mono mt-1 sm:mt-0 bg-indigo-950/30 px-2 py-0.5 rounded">JAN 2024 — FEB 2025</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-3">ICT Officer</p>
+                    <ul class="list-disc list-outside ml-4 text-sm text-slate-400 space-y-1 marker:text-indigo-500/50">
+                        <li>Developed web apps serving 200+ staff across four offices.</li>
+                        <li>Automated system monitoring using PowerShell, reducing downtime.</li>
+                        <li>Led cloud migration to SharePoint Online with zero data loss.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-950 border border-violet-500 ring-4 ring-violet-900/20"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-violet-100 font-medium tracking-tight" data-typewriter="IEBC" data-speed="50"></h3>
+                        <span class="text-xs text-violet-400/60 font-mono mt-1 sm:mt-0 bg-violet-950/30 px-2 py-0.5 rounded">JUL 2022 — OCT 2022</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-3">ICT Officer</p>
+                    <ul class="list-disc list-outside ml-4 text-sm text-slate-400 space-y-1 marker:text-violet-500/50">
+                        <li>Maintained 80+ critical systems ensuring uptime during elections.</li>
+                        <li>Architected secure network infrastructure for tallying center.</li>
+                        <li>Technical troubleshooting with 5-minute resolution time.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-950 border border-cyan-500 ring-4 ring-cyan-900/20"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-cyan-100 font-medium tracking-tight" data-typewriter="Freelancer" data-speed="40"></h3>
+                        <span class="text-xs text-cyan-400/60 font-mono mt-1 sm:mt-0 bg-cyan-950/30 px-2 py-0.5 rounded">JUL 2021 — FEB 2022</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-3">Full-Stack Developer</p>
+                    <ul class="list-disc list-outside ml-4 text-sm text-slate-400 space-y-1 marker:text-cyan-500/50">
+                        <li>Built 6+ full-stack apps using React &amp; Node.js for SME clients.</li>
+                        <li>Integrated PayPal &amp; M-Pesa payment gateways.</li>
+                        <li>Implemented CI/CD pipelines on Vercel and Convex.</li>
+                    </ul>
+                </div>
+
+                 <!-- Job 4 -->
+                 <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-950 border border-slate-600 ring-4 ring-slate-800"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-slate-200 font-medium tracking-tight" data-typewriter="Gatundu Law Courts" data-speed="35"></h3>
+                        <span class="text-xs text-slate-500 font-mono mt-1 sm:mt-0 bg-slate-900 px-2 py-0.5 rounded">JAN 2019 — APR 2019</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-3">Junior Developer</p>
+                    <ul class="list-disc list-outside ml-4 text-sm text-slate-400 space-y-1 marker:text-slate-600">
+                        <li>Maintained Judiciary CMS ensuring compliance.</li>
+                        <li>Documented system architecture and SOPs.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-20 fade-in-section">
+            <h2 class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-6 flex items-center gap-2">
+                <i data-lucide="cpu" class="w-4 h-4"></i>
+                <span data-typewriter="Technical Skills" data-speed="40"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xs text-slate-500 mb-3 uppercase tracking-wide font-semibold" data-typewriter="Core Stack" data-speed="50"></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-950/30 border border-yellow-900/50 text-yellow-300 text-xs rounded-full hover:bg-yellow-900/50 transition-colors cursor-default">JavaScript / TypeScript</span>
+                        <span class="px-3 py-1 bg-cyan-950/30 border border-cyan-900/50 text-cyan-300 text-xs rounded-full hover:bg-cyan-900/50 transition-colors cursor-default">React</span>
+                        <span class="px-3 py-1 bg-green-950/30 border border-green-900/50 text-green-300 text-xs rounded-full hover:bg-green-900/50 transition-colors cursor-default">Node.js</span>
+                        <span class="px-3 py-1 bg-emerald-950/30 border border-emerald-900/50 text-emerald-300 text-xs rounded-full hover:bg-emerald-900/50 transition-colors cursor-default">Vue.js</span>
+                        <span class="px-3 py-1 bg-orange-950/30 border border-orange-900/50 text-orange-300 text-xs rounded-full hover:bg-orange-900/50 transition-colors cursor-default">HTML5 &amp; CSS3</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xs text-slate-500 mb-3 uppercase tracking-wide font-semibold" data-typewriter="Backend & DevOps" data-speed="45"></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-950/30 border border-green-900/50 text-green-300 text-xs rounded-full hover:bg-green-900/50 transition-colors cursor-default">MongoDB</span>
+                        <span class="px-3 py-1 bg-blue-950/30 border border-blue-900/50 text-blue-300 text-xs rounded-full hover:bg-blue-900/50 transition-colors cursor-default">SQL/NoSQL</span>
+                        <span class="px-3 py-1 bg-amber-950/30 border border-amber-900/50 text-amber-300 text-xs rounded-full hover:bg-amber-900/50 transition-colors cursor-default">AWS (EC2, S3)</span>
+                        <span class="px-3 py-1 bg-purple-950/30 border border-purple-900/50 text-purple-300 text-xs rounded-full hover:bg-purple-900/50 transition-colors cursor-default">CI/CD</span>
+                        <span class="px-3 py-1 bg-rose-950/30 border border-rose-900/50 text-rose-300 text-xs rounded-full hover:bg-rose-900/50 transition-colors cursor-default">Git &amp; GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Misc -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 fade-in-section">
+            <div>
+                <h2 class="text-sm font-semibold text-pink-400 uppercase tracking-wider mb-6 flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    <span data-typewriter="Education" data-speed="45"></span>
+                </h2>
+                <div class="bg-gradient-to-br from-pink-950/20 to-transparent border border-pink-900/30 p-5 rounded-lg">
+                    <h3 class="text-pink-100 font-medium text-sm" data-typewriter="South Eastern Kenya University" data-speed="30"></h3>
+                    <p class="text-pink-400/70 text-xs mt-1" data-typewriter="B.Sc. Information Technology" data-speed="35"></p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-sm font-semibold text-orange-400 uppercase tracking-wider mb-6 flex items-center gap-2">
+                    <i data-lucide="heart" class="w-4 h-4"></i>
+                    <span data-typewriter="Hobbies & Languages" data-speed="40"></span>
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-amber-400">Reading</span>
+                        <span class="text-xs text-white/30">•</span>
+                        <span class="text-xs text-cyan-400">Programming</span>
+                        <span class="text-xs text-white/30">•</span>
+                        <span class="text-xs text-purple-400">Chess</span>
+                        <span class="text-xs text-white/30">•</span>
+                        <span class="text-xs text-blue-400">Swimming</span>
+                        <span class="text-xs text-white/30">•</span>
+                        <span class="text-xs text-green-400">Football</span>
+                    </div>
+                    <div class="text-xs text-slate-500">
+                        Languages: <span class="text-rose-400">English</span>, <span class="text-emerald-400">Swahili</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Footer -->
+        <footer class="w-full border-t border-slate-900 pt-8">
+            <div class="flex flex-col items-center gap-4 mb-6">
+                <img src="logo.jpeg" alt="Link Bridge" class="h-14 md:h-16 w-auto">
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
+                <p>© 2025 Mike Waitindi. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <span class="flex items-center gap-1 text-slate-500"><i data-lucide="map-pin" class="w-3 h-3 text-red-400"></i> Nairobi, Kenya</span>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        // Typing animation class
+        class TypeWriter {
+            constructor(element, text, speed = 50) {
+                this.element = element;
+                this.text = text;
+                this.speed = speed;
+                this.charIndex = 0;
+                this.started = false;
+            }
+
+            type() {
+                if (this.charIndex < this.text.length) {
+                    this.element.textContent += this.text.charAt(this.charIndex);
+                    this.charIndex++;
+                    setTimeout(() => this.type(), this.speed);
+                } else {
+                    // Remove cursor after typing
+                    const cursor = this.element.nextElementSibling;
+                    if (cursor && cursor.classList.contains('typing-cursor')) {
+                        setTimeout(() => cursor.style.opacity = '0', 800);
+                    }
+                }
+            }
+
+            start() {
+                if (!this.started) {
+                    this.started = true;
+                    this.type();
+                }
+            }
+        }
+
+        // Hero sequential typing animation with moving cursor
+        const heroElements = [
+            { el: document.getElementById('hero-line1'), text: 'Full-Stack Developer ', speed: 60 },
+            { el: document.getElementById('hero-line2'), text: 'crafting ', speed: 60 },
+            { el: document.getElementById('hero-line3'), text: 'scalable solutions.', speed: 60 },
+            { el: document.getElementById('hero-paragraph'), text: "I'm Mike Waitindi, a developer based in Nairobi, Kenya with 3+ years of experience. I transform concepts into production-ready systems using JavaScript, React, and Node.js", speed: 25 }
+        ];
+
+        // Create cursor element
+        const cursor = document.createElement('span');
+        cursor.className = 'text-fuchsia-500 font-normal';
+        cursor.textContent = '|';
+        cursor.id = 'hero-cursor';
+
+        let cursorVisible = true;
+        setInterval(() => {
+            cursorVisible = !cursorVisible;
+            cursor.style.opacity = cursorVisible ? '1' : '0';
+        }, 500);
+
+        function typeHeroSequence(index = 0) {
+            if (index >= heroElements.length) {
+                // Keep cursor blinking at the end
+                return;
+            }
+
+            const { el, text, speed } = heroElements[index];
+            let charIndex = 0;
+
+            // Move cursor to current element
+            el.appendChild(cursor);
+
+            function typeChar() {
+                if (charIndex < text.length) {
+                    // Insert character before cursor
+                    const textNode = document.createTextNode(text.charAt(charIndex));
+                    el.insertBefore(textNode, cursor);
+                    charIndex++;
+                    setTimeout(typeChar, speed);
+                } else {
+                    // Move to next element
+                    setTimeout(() => typeHeroSequence(index + 1), 200);
+                }
+            }
+
+            typeChar();
+        }
+
+        // Start hero typing after page load
+        setTimeout(() => typeHeroSequence(0), 500);
+
+        // Setup typing for all elements with data-typewriter attribute (no cursor)
+        document.querySelectorAll('[data-typewriter]').forEach(el => {
+            const text = el.getAttribute('data-typewriter');
+            const speed = parseInt(el.getAttribute('data-speed')) || 30;
+            el.textContent = '';
+            el._typewriter = new TypeWriter(el, text, speed);
+        });
+
+        // Scroll observer for fade-in and typing animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger typing animation if element has typewriter
+                    if (entry.target._typewriter) {
+                        entry.target._typewriter.start();
+                    }
+                    
+                    // Find and trigger any typewriter children
+                    entry.target.querySelectorAll('[data-typewriter]').forEach(el => {
+                        if (el._typewriter) {
+                            setTimeout(() => el._typewriter.start(), 200);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in-section, .fade-in-left, .fade-in-right, .fade-in-scale, [data-typewriter]').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>
